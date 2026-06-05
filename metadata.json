@@ -1,0 +1,6 @@
+{
+  "name": "Personal Brand Masterclass",
+  "description": "Premium landing page for a 5-Day Virtual Intensive on personal branding, featuring pricing tiers and speaker teasers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
