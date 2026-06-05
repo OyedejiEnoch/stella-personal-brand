@@ -2,40 +2,41 @@
 
 import * as React from 'react';
 import { motion } from 'motion/react';
+import Image from 'next/image';
 
 const SPEAKERS = [
   {
     name: 'Mystery Speaker 1',
     countryCode: 'US',
-    flag: '🇺🇸',
+    flag: '/america.webp',
     role: 'US FOUNDER & LINKEDIN TOP CREATOR',
     description: 'A powerhouse in building global audiences and attracting high-ticket clients through personal branding.',
   },
   {
     name: 'Mystery Speaker 2',
     countryCode: 'NG',
-    flag: '🇳🇬',
+    flag: '/nigeria.jpg',
     role: 'AWARD WINNING LINKEDIN CREATOR',
     description: 'Nigerian-based global advocate empowering changemakers and building communities that span continents.',
   },
   {
     name: 'Mystery Speaker 3',
     countryCode: 'NG',
-    flag: '🇳🇬',
+    flag: '/nigeria.jpg',
     role: 'TIKTOK EMPLOYEE',
     description: 'Expert in navigating the global tech landscape, sharing insights on securing roles in top companies like TikTok.',
   },
   {
     name: 'Mystery Speaker 4',
     countryCode: 'IE',
-    flag: '🇮🇪',
+    flag: '/ireland.webp',
     role: 'FOUNDER OF ESTER BARE',
     description: 'Dublin-based founder sharing the exact strategies to position your business for international visibility.',
   },
   {
     name: 'Mystery Speaker 5',
     countryCode: 'IE',
-    flag: '🇮🇪',
+    flag: '/ireland.webp',
     role: 'LINKEDIN EMPLOYEE',
     description: 'Insider secrets from a LinkedIn professional on how to optimize your profile to attract the right opportunities globally.',
   },
@@ -51,7 +52,7 @@ export default function Speakers() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4"
           >
             Real Insights From<br />Industry Leaders.
           </motion.h2>
@@ -121,7 +122,8 @@ export default function Speakers() {
                 <h3 className="text-xl font-bold mb-1 flex items-center flex-wrap gap-2 text-brand-primary">
                   {speaker.name} 
                   <span className="text-xs font-semibold text-brand-primary/50 tracking-wider pt-1">{speaker.countryCode}</span>
-                  <span className="text-lg pt-0.5">{speaker.flag}</span>
+                  <Image src={speaker.flag} alt='flag' width={20} height={20} />
+                  {/* <span className="text-lg pt-0.5">{speaker.flag}</span> */}
                 </h3>
                 <div className="text-brand-accent font-bold text-[10px] mb-3 uppercase tracking-wider">
                   {speaker.role}

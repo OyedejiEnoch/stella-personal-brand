@@ -2,6 +2,7 @@ import Navbar from '@/components/sections/Navbar';
 import Hero from '@/components/sections/Hero';
 import Curriculum from '@/components/sections/Curriculum';
 import Speakers from '@/components/sections/Speakers';
+import Outcomes from '@/components/sections/Outcomes';
 import Pricing from '@/components/sections/Pricing';
 import Host from '@/components/sections/Host';
 import Bonuses from '@/components/sections/Bonuses';
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Curriculum />
       <Speakers />
+      <Outcomes />
       <Pricing />
       <Host />
       <Bonuses />

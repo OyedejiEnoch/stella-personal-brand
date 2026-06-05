@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css'; // Global styles
 import SmoothScrolling from '@/components/SmoothScrolling';
+import ScrollProgress from '@/components/ScrollProgress';
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -18,6 +19,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     <html lang="en" className={`${jakarta.variable} font-sans`}>
       <body suppressHydrationWarning className="antialiased font-sans bg-white text-brand-primary">
         <SmoothScrolling>
+          <ScrollProgress />
           {children}
         </SmoothScrolling>
       </body>

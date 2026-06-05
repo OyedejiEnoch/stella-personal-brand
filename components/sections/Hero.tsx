@@ -4,8 +4,32 @@ import * as React from 'react';
 import Link from 'next/link';
 import { motion } from 'motion/react';
 import { Calendar, ArrowRight } from 'lucide-react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function Hero() {
+  const imageRef = React.useRef<HTMLImageElement>(null);
+
+  React.useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+      // Subtle parallax: image drifts up as the hero scrolls away
+      gsap.to(imageRef.current, {
+        yPercent: -12,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: imageRef.current,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        },
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-brand-light">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
@@ -74,10 +98,11 @@ export default function Hero() {
             
             {/* The organizer photo */}
             <div className="relative h-full w-full rounded-t-full rounded-b-[2rem] overflow-hidden border-8 border-white shadow-xl bg-gray-200">
-              <img 
-                src="/organizer.jpg" 
-                alt="Estelle" 
-                className="w-full h-full object-cover"
+              <img
+                ref={imageRef}
+                src="/stella.jpeg"
+                alt="Estelle"
+                className="w-full h-full object-cover scale-110 will-change-transform"
                 onError={(e) => {
                   e.currentTarget.src = "https://picsum.photos/seed/organizer/800/1000";
                 }}

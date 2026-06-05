@@ -61,7 +61,7 @@ export default function Curriculum() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg text-brand-primary/70"
+            className="text-md md:text-lg text-brand-primary/70 tracking-wider"
           >
             A deep dive into the exact systems and strategies used to build 
             global authority and predictable income.
@@ -81,7 +81,7 @@ export default function Curriculum() {
               }`}
             >
               <div 
-                className={`text-6xl font-extrabold mb-4 opacity-20 tracking-tighter ${
+                className={`text-5xl font-extrabold mb-4 opacity-20 tracking-tighter ${
                   point.dark ? 'text-white' : 'text-brand-primary'
                 }`}
               >
@@ -90,11 +90,11 @@ export default function Curriculum() {
               
               <div className="w-8 h-1 bg-brand-accent mb-6"></div>
               
-              <h3 className="text-xl font-bold mb-4">
+              <h3 className="text-lg font-bold mb-4">
                 {point.title}
               </h3>
               
-              <p className={`text-sm leading-relaxed ${point.dark ? 'text-white/70' : 'text-brand-primary/70'}`}>
+              <p className={`text-[13px] tracking-wider leading-relaxed ${point.dark ? 'text-white/70' : 'text-brand-primary/70'}`}>
                 {point.description}
               </p>
             </motion.div>

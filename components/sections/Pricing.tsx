@@ -146,7 +146,7 @@ export default function Pricing() {
                 <div className={`text-sm font-semibold mb-4 ${tier.popular ? 'text-brand-accent' : 'text-brand-accent'}`}>
                   {tier.tagline}
                 </div>
-                <p className={`text-sm ${tier.popular ? 'text-white/80' : 'text-brand-primary/70'}`}>
+                <p className={`text-sm ${tier.popular ? 'text-white/80' : 'text-gray-400'}`}>
                   {tier.description}
                 </p>
               </div>

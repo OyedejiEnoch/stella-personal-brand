@@ -21,7 +21,7 @@ export default function Host() {
             <div className="w-full max-w-md aspect-[3/4] rounded-xl bg-gray-900 relative overflow-hidden flex flex-col justify-between p-6 border border-white/10 shadow-2xl">
               {/* Background Image Image */}
               <img 
-                src="/organizer.jpg" 
+                src="/stella2.jpeg" 
                 alt="Stella Nwosu" 
                 className="absolute inset-0 w-full h-full object-cover grayscale opacity-80" 
                 onError={(e) => {

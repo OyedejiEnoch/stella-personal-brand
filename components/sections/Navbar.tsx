@@ -34,9 +34,9 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-2">
               <img 
-                src="/logo.png" 
+                src="/Estellelogonew2.png" 
                 alt="Estelle" 
-                className="h-10 w-auto"
+                className="h-14 w-auto"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                   const span = e.currentTarget.nextElementSibling as HTMLSpanElement;
