@@ -7,15 +7,16 @@ import { Check } from 'lucide-react';
 const PRICING_TIERS = [
   {
     name: 'Standard Access',
-    price: '₦10,000',
+    price: '10K/$10',
     tagline: '“Get Visible”',
     description: 'Perfect for you to gain clarity trying to stop being invisible.',
     features: [
       'Day 1 Speaker: US Founder & LinkedIn Top Creator',
-      'Day 2 Speaker: Award winning LinkedIn Top Creator',
-      'Full Day 1 & 2 virtual masterclass access',
-      'Access to Recordings & materials for Day 1 & 2',
-      'LinkedIn profile & content optimization guide',
+      'Day 2 Speaker: LinkedIn Top Creator (120k + Linkedin Community)',
+      'Full Access 3-Day virtual masterclass',
+      'Access to Recordings & materials for Day 1-3',
+      'Free LinkedIn Profile & Content Optimization guide',
+      'Free Content Audit for First 20 people',
     ],
     transformations: [
       'Position your personal brand professionally',
@@ -30,20 +31,19 @@ const PRICING_TIERS = [
     textColor: 'text-brand-primary'
   },
   {
-    name: 'Premium Access',
+    name: 'VIP Access',
     price: '₦30,000',
-    tagline: '“Attract Opportunities”',
+    tagline: '“Consistent 7-9 Figures”',
     badge: 'Recommended',
-    description: 'Perfect for freelancers, creators, and founders ready to start attracting clients, recruiters, and partnerships.',
+    description: 'Perfect for founders, remote workers & creators, ready to increase income.',
     features: [
-      'EVERYTHING in Standard PLUS:',
-      'Day 3 Speaker: TikTok Employee',
-      'Day 4 Speaker: Founder of Ester bare',
-      'Full access to Day 1-4 virtual sessions',
-      'Recordings & materials for Day 1-4',
-      'Client acquisition DM scripts',
+      'Day 3 Speaker: Linkedin Employee',
+      'Day 2 Speaker: Founder of Ester bare',
+      'Access to Recordings and Materials for Day 1-3',
       'Free Personal brand growth roadmap',
-      'Access to Q&A with speakers'
+      'Free content monitization strategy guide',
+      'Private networking, 1-1 access with all speakers',
+      'We spotlight your skill/business to community members across 15+ countries'
     ],
     transformations: [
       'Attract higher-paying opportunities',
@@ -57,34 +57,34 @@ const PRICING_TIERS = [
     color: 'bg-brand-primary',
     textColor: 'text-white'
   },
-  {
-    name: 'VIP Access',
-    price: '₦50,000',
-    tagline: '“Become the Go-To Authority”',
-    badge: 'Limited to 30 people',
-    description: 'Perfect for founders, creators, and professionals ready to dominate their niche and attract premium opportunities globally.',
-    features: [
-      'EVERYTHING in Premium PLUS:',
-      'Day 5 Speaker: LinkedIn Employee',
-      'Full access to Day 1-5 virtual sessions',
-      'Recordings & materials of Day 1-5',
-      'Free Content monetization strategy guide',
-      'Private VIP mastermind group',
-      'Priority networking 1-1 access with all speakers',
-      'Pitch your skills/business to 100+ members'
-    ],
-    transformations: [
-      'Build a consistent client acquisition funnel',
-      'Attract high-ticket clients organically',
-      'Understand how to close sales on LinkedIn',
-      'Create a personal brand that generates opportunities'
-    ],
-    catchPhrase: '“The highest-paid people online are not always the most talented, they are the best positioned.”',
-    buttonText: 'Get VIP Access',
-    popular: false,
-    color: 'bg-brand-dark',
-    textColor: 'text-white'
-  }
+  // {
+  //   name: 'VIP Access',
+  //   price: '₦50,000',
+  //   tagline: '“Become the Go-To Authority”',
+  //   badge: 'Limited to 30 people',
+  //   description: 'Perfect for founders, creators, and professionals ready to dominate their niche and attract premium opportunities globally.',
+  //   features: [
+  //     'EVERYTHING in Premium PLUS:',
+  //     'Day 5 Speaker: LinkedIn Employee',
+  //     'Full access to Day 1-5 virtual sessions',
+  //     'Recordings & materials of Day 1-5',
+  //     'Free Content monetization strategy guide',
+  //     'Private VIP mastermind group',
+  //     'Priority networking 1-1 access with all speakers',
+  //     'Pitch your skills/business to 100+ members'
+  //   ],
+  //   transformations: [
+  //     'Build a consistent client acquisition funnel',
+  //     'Attract high-ticket clients organically',
+  //     'Understand how to close sales on LinkedIn',
+  //     'Create a personal brand that generates opportunities'
+  //   ],
+  //   catchPhrase: '“The highest-paid people online are not always the most talented, they are the best positioned.”',
+  //   buttonText: 'Get VIP Access',
+  //   popular: false,
+  //   color: 'bg-brand-dark',
+  //   textColor: 'text-white'
+  // }
 ];
 
 export default function Pricing() {
@@ -120,7 +120,7 @@ export default function Pricing() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
           {PRICING_TIERS.map((tier, index) => (
             <motion.div
               key={index}

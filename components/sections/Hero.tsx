@@ -70,7 +70,7 @@ export default function Hero() {
             </div>
             
             <div className="mt-12 flex items-center gap-4">
-              <div className="flex -space-x-4">
+              {/* <div className="flex -space-x-4">
                 {[1, 2, 3, 4].map((i) => (
                   <img
                     key={i}
@@ -79,7 +79,7 @@ export default function Hero() {
                     alt="Attendee"
                   />
                 ))}
-              </div>
+              </div> */}
               <div className="text-sm font-medium text-brand-primary/80">
                 Join <span className="font-bold text-brand-primary">500+</span> professionals worldwide
               </div>
