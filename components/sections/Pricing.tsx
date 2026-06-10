@@ -87,14 +87,11 @@ const PRICING_TIERS = [
   // }
 ];
 
+const PAYMENT_URL = 'https://nestuge.com/personalbrandmasterclass';
+
 export default function Pricing() {
-  const handlePayment = (amount: string, tier: string) => {
-    // Integration approach: 
-    // We recommended using Paystack Inline Popup as it provides a seamless
-    // non-redirect experience keeping them on the landing page, 
-    // and easily allows a post-payment redirect via code to a WhatsApp group.
-    console.log(`Initiate Paystack for ${tier} at ${amount}`);
-    alert(`Payment initialization for ${tier} will go here.`);
+  const handlePayment = () => {
+    window.location.href = PAYMENT_URL;
   };
 
   return (
@@ -182,7 +179,7 @@ export default function Pricing() {
                   {tier.catchPhrase}
                 </p>
                 <button
-                  onClick={() => handlePayment(tier.price, tier.name)}
+                  onClick={handlePayment}
                   className={`w-full py-4 px-6 rounded-md font-bold text-center transition-all ${
                     tier.popular
                       ? 'bg-brand-accent text-brand-primary hover:bg-white'
