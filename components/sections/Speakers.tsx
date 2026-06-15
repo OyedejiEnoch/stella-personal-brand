@@ -5,41 +5,45 @@ import { motion } from 'motion/react';
 import Image from 'next/image';
 
 const SPEAKERS = [
+  // {
+  //   name: 'Mystery Speaker 1',
+  //   countryCode: 'US',
+  //   image:"",
+  //   flag: '/america.webp',
+  //   role: 'US FOUNDER & LINKEDIN TOP CREATOR',
+  //   description: 'A powerhouse in building global audiences and attracting high-ticket clients through personal branding.',
+  // },
   {
-    name: 'Mystery Speaker 1',
-    countryCode: 'US',
-    flag: '/america.webp',
-    role: 'US FOUNDER & LINKEDIN TOP CREATOR',
-    description: 'A powerhouse in building global audiences and attracting high-ticket clients through personal branding.',
-  },
-  {
-    name: 'Mystery Speaker 2',
+    name: 'Blessing Ikpia',
     countryCode: 'NG',
+    image: '/speaker1.jpeg',
     flag: '/nigeria.jpg',
-    role: 'AWARD WINNING LINKEDIN CREATOR',
+    role: 'Co-Founder Elite Global AI',
     description: 'Nigerian-based global advocate empowering changemakers and building communities that span continents.',
   },
   {
-    name: 'Mystery Speaker 3',
+    name: 'King-Inneh Joseph',
     countryCode: 'NG',
+    image: '/speaker2.jpeg',
     flag: '/nigeria.jpg',
-    role: 'TIKTOK EMPLOYEE',
-    description: 'Expert in navigating the global tech landscape, sharing insights on securing roles in top companies like TikTok.',
+    role: 'Award Winning Linkedln Content Strategist ',
+    description: 'Expert in navigating the global tech landscape, sharing insights on securing roles in top companies.',
   },
   {
-    name: 'Mystery Speaker 4',
+    name: 'Esther Uzodinma',
     countryCode: 'IE',
-    flag: '/ireland.webp',
+    image: '/speaker3.jpeg',
+    flag: '/nigeria.jpg',
     role: 'FOUNDER OF ESTER BARE',
     description: 'Dublin-based founder sharing the exact strategies to position your business for international visibility.',
   },
-  {
-    name: 'Mystery Speaker 5',
-    countryCode: 'IE',
-    flag: '/ireland.webp',
-    role: 'LINKEDIN EMPLOYEE',
-    description: 'Insider secrets from a LinkedIn professional on how to optimize your profile to attract the right opportunities globally.',
-  },
+  // {
+  //   name: 'Mystery Speaker 5',
+  //   countryCode: 'IE',
+  //   flag: '/ireland.webp',
+  //   role: 'LINKEDIN EMPLOYEE',
+  //   description: 'Insider secrets from a LinkedIn professional on how to optimize your profile to attract the right opportunities globally.',
+  // },
 ];
 
 export default function Speakers() {
@@ -72,11 +76,11 @@ export default function Speakers() {
               <div className="w-full aspect-[3/4] rounded-xl bg-gray-900 mb-6 relative overflow-hidden flex flex-col justify-between p-5 border shadow-sm group-hover:shadow-md transition-shadow">
                 {/* Background Image / Blur */}
                 <img 
-                  src={`https://picsum.photos/seed/${index + 40}/400/600`} 
+                  src={`${speaker.image}`} 
                   alt="Speaker Silhouette" 
-                  className="absolute inset-0 w-full h-full object-cover grayscale opacity-50 blur-xl group-hover:scale-105 transition-transform duration-700" 
+                  className="absolute inset-0 w-full h-full object-cover  opacity-50 group-hover:scale-105 transition-transform duration-700" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-80"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-80"></div> */}
                 
                 {/* Top content */}
                 <div className="relative z-10 flex justify-between items-start">
@@ -92,7 +96,7 @@ export default function Speakers() {
                 {/* Main vertical text */}
                 <div className="absolute inset-y-0 right-4 flex flex-col justify-center pointer-events-none overflow-hidden mix-blend-overlay opacity-60">
                   <span className="text-white font-extrabold uppercase tracking-widest text-4xl -rotate-90 origin-right whitespace-nowrap opacity-40 translate-x-1/2">
-                    Mystery
+                    {speaker.name}
                   </span>
                 </div>
 
@@ -105,15 +109,15 @@ export default function Speakers() {
                   <p className="text-[10px] text-white/70 border-b border-white/20 pb-3 mb-3 leading-relaxed">
                     Unlocking strategies for global opportunities and authority positioning.
                   </p>
-                  <div className="flex justify-between items-end text-[8px] tracking-wider text-white/60">
-                    <div>
-                      Register On:<br/>
-                      <strong className="text-white">estelle.com</strong>
-                    </div>
-                    <div className="text-right">
-                      June 2025
-                    </div>
-                  </div>
+                    {/* <div className="flex justify-between items-end text-[8px] tracking-wider text-white/60">
+                      <div>
+                        Register On:<br/>
+                        <strong className="text-white">estelle.com</strong>
+                      </div>
+                      <div className="text-right">
+                        June 2025
+                      </div>
+                    </div> */}
                 </div>
               </div>
               
