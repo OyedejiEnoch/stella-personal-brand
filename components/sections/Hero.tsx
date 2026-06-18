@@ -44,7 +44,7 @@ export default function Hero() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-accent/20 text-brand-primary text-sm font-semibold mb-6">
               <Calendar size={16} />
-              <span>June 22–26, 2025 • Virtual Intensive</span>
+              <span>June 30th – Juily 2nd, 2026 • Virtual Intensive</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-brand-primary mb-6 leading-[1.1]">
