@@ -145,7 +145,7 @@ export default function Outcomes() {
                 What Changes For You
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.05] mb-6">
-                Five shifts that<br />reposition your brand.
+                Five <span className='text-yellow-300'>Shifts</span> that<br />repositions your brand.
               </h2>
               <p className="text-lg text-white/60 leading-relaxed font-medium">
                 This isn&apos;t theory. Each day moves you from invisible to in-demand.
@@ -165,7 +165,7 @@ export default function Outcomes() {
             <div className="text-4xl md:text-6xl font-extrabold tracking-tighter text-white/10 mb-6">
               {item.num}
             </div>
-            <div className="w-10 h-1 bg-brand-accent mb-8 transition-all duration-500 group-hover:w-20" />
+            <div className="w-10 h-1 bg-yellow-300 mb-8 transition-all duration-500 group-hover:w-20" />
             <h3 className="text-3xl md:text-4xl font-bold mb-5">{item.title}</h3>
             <p className="text-md text-white/60 max-w-sm leading-relaxed font-medium tracking-wider">
               {item.description}

@@ -12,8 +12,8 @@ const LEARNING_POINTS = [
   },
   {
     num: '02',
-    title: '7-Figure Brand Building',
-    description: 'How to build a 7 figure Personal brand as a Creator, Remote worker & Founder.',
+    title: 'Building a 7-9 Figure Personal Brand',
+    description: 'How to build a 7-9 figure Personal brand as a Creator, Remote worker & Founder.',
     dark: true,
   },
   {
@@ -44,7 +44,7 @@ const LEARNING_POINTS = [
 
 export default function Curriculum() {
   return (
-    <section id="curriculum" className="py-24 bg-white">
+    <section id="curriculum" className="pt-16 pb-10 bg-white">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2 

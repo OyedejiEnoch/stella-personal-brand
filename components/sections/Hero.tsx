@@ -6,6 +6,7 @@ import { motion } from 'motion/react';
 import { Calendar, ArrowRight } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Countdown from '@/components/sections/Countdown';
 
 export default function Hero() {
   const imageRef = React.useRef<HTMLImageElement>(null);
@@ -31,8 +32,14 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-brand-light">
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="relative pb-20 md:pb-32 overflow-hidden bg-brand-light">
+      {/* Navbar clearance — keeps the transparent navbar readable over the light area */}
+      <div className="pt-28 md:pt-32" />
+
+      {/* Premium countdown strip, full-bleed */}
+      <Countdown />
+
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 pt-16 md:pt-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           
           {/* Text Content */}

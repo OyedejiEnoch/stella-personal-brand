@@ -19,7 +19,8 @@ const SPEAKERS = [
     image: '/speaker1.jpeg',
     flag: '/nigeria.jpg',
     role: 'Co-Founder Elite Global AI',
-    description: 'Nigerian-based global advocate empowering changemakers and building communities that span continents.',
+    quote:" Unlocking strategies for global opportunities and authority positioning.",
+    description: 'A Linkedln Top Creator with over 90k + Followers. Trained over 3000 remote workers in getting international remote jobs',
   },
   {
     name: 'King-Inneh Joseph',
@@ -27,15 +28,17 @@ const SPEAKERS = [
     image: '/speaker2.jpeg',
     flag: '/nigeria.jpg',
     role: 'Award Winning Linkedln Content Strategist ',
-    description: 'Expert in navigating the global tech landscape, sharing insights on securing roles in top companies.',
+    quote: "Strategies to build a 7-9 figure personal brand and business.",
+    description: 'Award winning Linkedln Top Creator and strategist with over 120k + followers. Trained over 4000 founders, executives, creators and remote workers across 15 countries.',
   },
   {
     name: 'Esther Uzodinma',
     countryCode: 'IE',
     image: '/speaker3.jpeg',
     flag: '/nigeria.jpg',
-    role: 'FOUNDER OF ESTER BARE',
-    description: 'Dublin-based founder sharing the exact strategies to position your business for international visibility.',
+    role: 'FOUNDER OF ESTE BARE',
+    quote:"Storytelling strategy to build a global business, and close high ticket clients.",
+    description: 'A creative driven Entrepreneur & Creator with over 200k + followers across social media. She is an exceptional founder building Este bare which is Africa’s painless hair removal product. Gotten over $20,000 in grants for her business',
   },
   // {
   //   name: 'Mystery Speaker 5',
@@ -48,17 +51,17 @@ const SPEAKERS = [
 
 export default function Speakers() {
   return (
-    <section id="speakers" className="py-24 bg-white text-brand-primary">
+    <section id="speakers" className="py-16 bg-white text-brand-primary">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-16">
+        <div className="mb-6 md:mb-12">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-0 md:mb-4"
           >
-            Real Insights From<br />Industry Leaders.
+           <span className='text-6xl'> Speakers </span> <br/> <span className='text-yellow-400 text-4xl'>you'll be learning from.</span>
           </motion.h2>
         </div>
 
@@ -107,7 +110,7 @@ export default function Speakers() {
                     <span className="font-bold text-sm">Speaker Reveal</span>
                   </div>
                   <p className="text-[10px] text-white/70 border-b border-white/20 pb-3 mb-3 leading-relaxed">
-                    Unlocking strategies for global opportunities and authority positioning.
+                   {speaker.quote}
                   </p>
                     {/* <div className="flex justify-between items-end text-[8px] tracking-wider text-white/60">
                       <div>
