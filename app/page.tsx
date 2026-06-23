@@ -5,6 +5,7 @@ import Curriculum from '@/components/sections/Curriculum';
 import Speakers from '@/components/sections/Speakers';
 import Outcomes from '@/components/sections/Outcomes';
 import Testimonials from '@/components/sections/Testimonials';
+import Sponsors from '@/components/sections/Sponsors';
 import Pricing from '@/components/sections/Pricing';
 import Host from '@/components/sections/Host';
 import StellaProof from '@/components/sections/StellaProof';
@@ -21,6 +22,7 @@ export default function Home() {
       <Speakers />
       <Outcomes />
       <Testimonials />
+      <Sponsors />
       <Pricing />
       <Host />
       <StellaProof />
